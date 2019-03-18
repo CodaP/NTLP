@@ -1,0 +1,12 @@
+
+# Download splitter
+wget https://people.sc.fsu.edu/~jburkardt/c_src/f90split/f90split.c
+# Change mktemp to mkstemp in f90split.c
+gcc -o f90split f90split.c
+
+# Automatically split file into modules and subroutines
+./f90split les.F
+
+# Edit CMakeLists.txt as in commit to recognize any .F file as source
+
+# Done
